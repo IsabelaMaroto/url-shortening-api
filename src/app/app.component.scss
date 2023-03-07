@@ -1,0 +1,8 @@
+.container-body{
+  margin: 3rem auto 0;
+  font-family: 'Poppins', sans-serif;
+
+  @media (max-width: 25rem) {
+    margin: 1rem auto 0;
+  }
+}

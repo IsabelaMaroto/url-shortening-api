@@ -29,10 +29,10 @@ export class HomeComponent implements OnInit {
   getAPi() {
     this.http.get<teste>(`${apiBase}shorten?url=${this.link}`).subscribe(teste => {
       this.resposta.push(teste)
+      this.link = " ";
       console.log(this.resposta)
     })
   }
-
   botao(i: number) {
     const botao = document.getElementById(`botao${i}`)
     if (botao) {
@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
     let copyLink= document.getElementById(`link${i}`)?.innerHTML
     console.log(copyLink)
     copyLink ? navigator.clipboard.writeText(copyLink) : console.log('erro')
-    
-      
+
+
     }
   }
